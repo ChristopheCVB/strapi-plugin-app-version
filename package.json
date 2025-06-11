@@ -1,0 +1,114 @@
+{
+  "version": "0.0.1",
+  "strapi": {
+    "kind": "plugin",
+    "name": "app-version",
+    "displayName": "App Version",
+    "description": "Displays the package.json version in the Strapi settings"
+  },
+  "name": "strapi-plugin-app-version",
+  "description": "This plugin displays the package.json version in the Strapi settings",
+  "keywords": [
+    "strapi",
+    "plugin",
+    "app-version"
+  ],
+  "author": {
+    "name": "Christophe Carvalho Vilas-Boas",
+    "url": "https://github.com/ChristopheCVB"
+  },
+  "maintainers": [
+    {
+      "name": "Christophe Carvalho Vilas-Boas",
+      "url": "https://github.com/ChristopheCVB"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Christophe Carvalho Vilas-Boas",
+      "url": "https://github.com/ChristopheCVB"
+    },
+    {
+      "name": "Sylvain Marroufin",
+      "url": "https://github.com/smarroufin"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristopheCVB/strapi-plugin-app-version"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "source": "./admin/src/index.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "typecheck:front": "tsc --noEmit -p admin/tsconfig.json",
+    "typecheck:back": "tsc --noEmit -p server/tsconfig.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@strapi/design-system": "^2.0.0-rc.24",
+    "@strapi/icons": "^2.0.0-rc.24",
+    "@uidotdev/usehooks": "^2.4.1",
+    "react-intl": "^7.1.11",
+    "slugify": "^1.6.6",
+    "zod": "^3.25.56"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5.15.0",
+    "@strapi/typescript-utils": "^5.15.0",
+    "@stylistic/eslint-plugin": "^4.4.1",
+    "@types/koa": "^2.15.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-router-dom": "^6",
+    "styled-components": "^6",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.1"
+  },
+  "peerDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-router-dom": "^6",
+    "styled-components": "^6"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": "pnpm@10.12.1",
+  "volta": {
+    "node": "22.14.0",
+    "pnpm": "10.12.1"
+  }
+}
