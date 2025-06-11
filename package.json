@@ -4,10 +4,10 @@
     "kind": "plugin",
     "name": "app-version",
     "displayName": "App Version",
-    "description": "Displays the package.json version in the Strapi settings"
+    "description": "Displays the version in the Strapi settings"
   },
   "name": "strapi-plugin-app-version",
-  "description": "This plugin displays the package.json version in the Strapi settings",
+  "description": "This plugin displays the version in the Strapi settings",
   "keywords": [
     "strapi",
     "plugin",
