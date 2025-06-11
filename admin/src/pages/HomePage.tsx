@@ -3,15 +3,18 @@ import type { Config } from '../../../server/src/config'
 import { PLUGIN_ID } from '../pluginId'
 import { EmptyStateLayout } from '@strapi/design-system'
 import { Layouts, Page, getFetchClient } from '@strapi/strapi/admin'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const HomePage = () => {
+  const { get } = getFetchClient()
+  
   const [version, setVersion] = useState<string>('...')
 
-  const { get } = getFetchClient()
-  get<{ version: Config['version'] }>(`/${PLUGIN_ID}/config/version`).then(({ data }) => {
-    setVersion(data.version || 'unknown')
-  })
+  useEffect(() => {
+    get<{ version: Config['version'] }>(`/${PLUGIN_ID}/config/version`).then(({ data }) => {
+      setVersion(data.version || 'unknown')
+    })
+  }, [])
 
   return (
     <Page.Main>
