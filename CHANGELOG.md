@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.0](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.0.3...v0.1.0) (2025-06-12)
+
+
+### Features
+
+* Enhance loading state with Loader component and update version handling ([9b1afe1](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/9b1afe118e5bf1b68b2415894a1e3cf5c75c862e))
+
+
+### Bug Fixes
+
+* Replace Information icon with Code icon in loading state for better clarity ([4ea6728](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/4ea67284f7a3dab5d772bd7fbf27294352830218))
+
 ## [0.0.3](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.0.2...v0.0.3) (2025-06-11)
 
 
