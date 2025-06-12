@@ -1,22 +1,27 @@
 import type { Config } from '../../../server/src/config'
 
 import { PLUGIN_ID } from '../pluginId'
-import { EmptyStateLayout } from '@strapi/design-system'
+import { EmptyStateLayout, Loader } from '@strapi/design-system'
+import { Information } from '@strapi/icons'
 import { Layouts, Page, getFetchClient } from '@strapi/strapi/admin'
 import { useState, useEffect } from 'react'
 
 const HomePage = () => {
   const { get } = getFetchClient()
   
-  const [version, setVersion] = useState<string>('Loading...')
+  const [isLoading, setIsLoading] = useState(true)
+  const [version, setVersion] = useState<string | undefined>(undefined)
 
   useEffect(() => {
+    setIsLoading(true)
     get<{ version: Config['version'] }>(`/${PLUGIN_ID}/config/version`).then(({ data }) => {
-      setVersion(data.version || 'unknown')
+      setVersion(data.version)
     }).catch((error) => {
       // eslint-disable-next-line no-console
       console.error('Failed to fetch version:', error)
       setVersion('unknown')
+    }).finally(() => {
+      setIsLoading(false)
     })
   }, [])
 
@@ -26,7 +31,7 @@ const HomePage = () => {
         title={'App Version'}
       />
       <Layouts.Content>
-        <EmptyStateLayout icon={<div />} content={`Version: ${version}`} />
+        <EmptyStateLayout icon={isLoading ? <Loader /> : <Information />} content={`Version: ${version}`} />
       </Layouts.Content>
     </Page.Main>
   )
