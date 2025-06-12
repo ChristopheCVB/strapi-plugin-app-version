@@ -2,7 +2,7 @@ import type { Config } from '../../../server/src/config'
 
 import { PLUGIN_ID } from '../pluginId'
 import { EmptyStateLayout, Loader } from '@strapi/design-system'
-import { Information } from '@strapi/icons'
+import { Code } from '@strapi/icons'
 import { Layouts, Page, getFetchClient } from '@strapi/strapi/admin'
 import { useState, useEffect } from 'react'
 
@@ -31,7 +31,7 @@ const HomePage = () => {
         title={'App Version'}
       />
       <Layouts.Content>
-        <EmptyStateLayout icon={isLoading ? <Loader /> : <Information />} content={`Version: ${version}`} />
+        <EmptyStateLayout icon={isLoading ? <Loader /> : <Code style={{ width: '60px', height: '60px' }} />} content={`Version: ${version}`} />
       </Layouts.Content>
     </Page.Main>
   )
