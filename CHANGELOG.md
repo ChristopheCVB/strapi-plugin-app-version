@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.1.0...v0.2.0) (2025-06-14)
+
+
+### Features
+
+* add Vitest configuration and GitHub Actions for testing ([9bb2b57](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/9bb2b575b2fea45ef4a74518a46f18d24ce8b12d))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @strapi/design-system to ^2.0.0-rc.25 ([#10](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/10)) ([b6ab9de](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/b6ab9deb8ea73e81ffb86eeec8b53522751f2438))
+* **deps:** update dependency @strapi/icons to ^2.0.0-rc.25 ([#11](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/11)) ([c204854](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/c204854ab2867bcc662a8fd576224723f37e52e5))
+* **deps:** update dependency zod to ^3.25.64 ([#12](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/12)) ([12342d8](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/12342d80c3931cd846d33ad779f20edf79836961))
+
 ## [0.1.0](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.0.3...v0.1.0) (2025-06-12)
 
 
