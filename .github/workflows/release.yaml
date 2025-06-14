@@ -5,13 +5,33 @@ on:
     types: [published]
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - name: Setup pnpm 📦️
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node LTS ✨
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+
+      - uses: ./.github/actions/test
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm 📦️
+        uses: pnpm/action-setup@v4
 
       - name: Use Node LTS ✨
         uses: actions/setup-node@v4
@@ -26,6 +46,7 @@ jobs:
       - name: Build 🔨
         run: pnpm build
 
-      - uses: simenandre/publish-with-pnpm@v2
+      - name: Publish to NPM 📦️
+        uses: simenandre/publish-with-pnpm@v2
         with:
           npm-auth-token: ${{ secrets.NPM_TOKEN }}

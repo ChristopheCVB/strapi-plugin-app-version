@@ -1,0 +1,23 @@
+name: 'Test'
+description: 'Run tests, type checking, and linting for the project'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install dependencies 📦️
+      shell: bash
+      run: pnpm install --frozen-lockfile
+
+    - name: Type check 🔍
+      shell: bash
+      run: |
+        pnpm typecheck:front
+        pnpm typecheck:back
+
+    - name: Lint code ✨
+      shell: bash
+      run: pnpm lint
+
+    - name: Run tests 🧪
+      shell: bash
+      run: pnpm test 
