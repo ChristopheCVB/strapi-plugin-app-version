@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.2.0...v0.2.1) (2025-06-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @strapi/design-system to ^2.0.0-rc.26 ([#22](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/22)) ([8a92b65](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/8a92b6515de991446be52470b376834523dbf09e))
+* **deps:** update dependency @strapi/icons to ^2.0.0-rc.26 ([#23](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/23)) ([24680cc](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/24680cc06707e33530774ade7f267e5645bef45a))
+
 ## [0.2.0](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.1.0...v0.2.0) (2025-06-14)
 
 
