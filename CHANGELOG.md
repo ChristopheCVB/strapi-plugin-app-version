@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.2.2...v0.3.0) (2025-06-18)
+
+
+### Features
+
+* Minimum node version ([1b62d34](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/1b62d343f87af2e0a7ec8b968848f8744c543580))
+
 ## [0.2.2](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.2.1...v0.2.2) (2025-06-17)
 
 
