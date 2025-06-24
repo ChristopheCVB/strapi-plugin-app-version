@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.4.0...v0.4.1) (2025-06-24)
+
+
+### Bug Fixes
+
+* **deps:** upgrade @stylistic/eslint-plugin to v5 ([5a54fdb](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/5a54fdbb676fb2e1b1292230525b346aa44b7e96))
+
 ## [0.4.0](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.3.0...v0.4.0) (2025-06-21)
 
 
