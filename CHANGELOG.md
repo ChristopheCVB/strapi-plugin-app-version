@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.5.0](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.4.1...v0.5.0) (2025-07-05)
+
+
+### Features
+
+* test, build & verify ([8754a11](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/8754a1161038172a5e8b69c825296abdaffd5b5c))
+
+
+### Bug Fixes
+
+* correct formatting in action.yml for test command ([9d726fa](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/9d726fa9a477c780f3336b4f8c7f7e34a7d9d03b))
+* **deps:** update dependency @strapi/design-system to ^2.0.0-rc.28 ([#51](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/51)) ([7b70c48](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/7b70c488013663eaad314acbca898ff494b9a9b3))
+* **deps:** update dependency @strapi/icons to ^2.0.0-rc.28 ([#52](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/52)) ([851713a](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/851713afb33a735d2e1a5a074b3932eed94aea0a))
+* **deps:** update dependency zod to ^3.25.74 ([#50](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/50)) ([3b1716d](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/3b1716db1dcfe83de0625b2a8e47ddb312b4b271))
+
 ## [0.4.1](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.4.0...v0.4.1) (2025-06-24)
 
 
