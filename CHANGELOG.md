@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.5.1](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.5.0...v0.5.1) (2025-10-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @strapi/design-system to ^2.0.0-rc.30 ([#102](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/102)) ([16226d3](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/16226d3f372cea69afbe2fb81fe06d1d363b09e4))
+* **deps:** update dependency @strapi/icons to ^2.0.0-rc.30 ([#105](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/105)) ([e0062ce](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/e0062ce347ca4cb66bf90d3b3798c8a9b645dc79))
+* **deps:** update dependency react-intl to ^7.1.12 ([#108](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/108)) ([42c6917](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/42c69177c7355e60baa85e93ceebd3d7498041ba))
+* **deps:** update dependency zod to ^4.0.10 ([#69](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/69)) ([d645878](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/d645878d32ce3f99810067e9d47e842c9028b9d4))
+* **deps:** update dependency zod to ^4.0.17 ([#71](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/71)) ([236ab44](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/236ab445339e1d3d5fc404d45200f6ecdac6572d))
+* **deps:** update dependency zod to ^4.0.8 ([#67](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/67)) ([36f0dc9](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/36f0dc99583417749839604cf6bff5f8bb0b36e1))
+* **deps:** update dependency zod to ^4.1.11 ([#100](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/100)) ([9653be0](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/9653be05ade350252d6fb8fdca08a8891db6c770))
+* **deps:** update dependency zod to ^4.1.4 ([#88](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/88)) ([7ad6a7c](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/7ad6a7cf05e947318aeaa998ae76ca7b58f4527c))
+* **deps:** update dependency zod to ^4.1.5 ([#91](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/91)) ([42c4bd2](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/42c4bd23cf9ffc2d4ceec41f8821a0c1ac8b7f5f))
+
 ## [0.5.0](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.4.1...v0.5.0) (2025-07-13)
 
 
