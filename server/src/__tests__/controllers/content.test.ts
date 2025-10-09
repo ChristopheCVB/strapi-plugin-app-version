@@ -14,92 +14,40 @@ describe('content controller', () => {
   })
 
   describe('configVersion', () => {
-    it('should return version from config', () => {
-      const mockVersion = '1.0.0'
-      mockStrapi.config.mockReturnValue(mockVersion)
+    it('should return props from config', () => {
+      mockStrapi.config.mockImplementation((key: string) => {
+        if (key === 'version') return '1.0.0'
+        if (key === 'date') return '2024-01-01'
+        if (key === 'url') return 'https://example.com'
+        return undefined
+      })
 
       const contentController = controller({ strapi: mockStrapi })
-      const result = contentController.configVersion()
+      const result = contentController.config()
 
       expect(mockStrapi.plugin).toHaveBeenCalledWith(PLUGIN_ID)
       expect(mockStrapi.config).toHaveBeenCalledWith('version')
+      expect(mockStrapi.config).toHaveBeenCalledWith('date')
+      expect(mockStrapi.config).toHaveBeenCalledWith('url')
       expect(result).toEqual({
-        version: mockVersion,
+        version: '1.0.0',
+        date: '2024-01-01',
+        url: 'https://example.com',
       })
-    })
-
-    it('should return default version when config returns unknown', () => {
-      const mockVersion = 'unknown'
-      mockStrapi.config.mockReturnValue(mockVersion)
-
-      const contentController = controller({ strapi: mockStrapi })
-      const result = contentController.configVersion()
-
-      expect(mockStrapi.plugin).toHaveBeenCalledWith(PLUGIN_ID)
-      expect(mockStrapi.config).toHaveBeenCalledWith('version')
-      expect(result).toEqual({
-        version: mockVersion,
-      })
-    })
-
-    it('should return custom version from config', () => {
-      const mockVersion = '2.1.3-beta'
-      mockStrapi.config.mockReturnValue(mockVersion)
-
-      const contentController = controller({ strapi: mockStrapi })
-      const result = contentController.configVersion()
-
-      expect(mockStrapi.plugin).toHaveBeenCalledWith(PLUGIN_ID)
-      expect(mockStrapi.config).toHaveBeenCalledWith('version')
-      expect(result).toEqual({
-        version: mockVersion,
-      })
-    })
-
-    it('should handle empty string version', () => {
-      const mockVersion = ''
-      mockStrapi.config.mockReturnValue(mockVersion)
-
-      const contentController = controller({ strapi: mockStrapi })
-      const result = contentController.configVersion()
-
-      expect(mockStrapi.plugin).toHaveBeenCalledWith(PLUGIN_ID)
-      expect(mockStrapi.config).toHaveBeenCalledWith('version')
-      expect(result).toEqual({
-        version: mockVersion,
-      })
-    })
-
-    it('should return correct structure with version property', () => {
-      const mockVersion = '3.0.0'
-      mockStrapi.config.mockReturnValue(mockVersion)
-
-      const contentController = controller({ strapi: mockStrapi })
-      const result = contentController.configVersion()
-
-      expect(result).toHaveProperty('version')
-      expect(typeof result.version).toBe('string')
-      expect(result.version).toBe(mockVersion)
     })
 
     it('should call strapi plugin with correct plugin ID', () => {
-      const mockVersion = '1.0.0'
-      mockStrapi.config.mockReturnValue(mockVersion)
+      mockStrapi.config.mockImplementation((key: string) => {
+        if (key === 'version') return '1.0.0'
+        if (key === 'date') return '2024-01-01'
+        if (key === 'url') return 'https://example.com'
+        return undefined
+      })
 
       const contentController = controller({ strapi: mockStrapi })
-      contentController.configVersion()
+      contentController.config()
 
       expect(mockStrapi.plugin).toHaveBeenCalledWith(PLUGIN_ID)
-    })
-
-    it('should call strapi config with version parameter', () => {
-      const mockVersion = '1.0.0'
-      mockStrapi.config.mockReturnValue(mockVersion)
-
-      const contentController = controller({ strapi: mockStrapi })
-      contentController.configVersion()
-
-      expect(mockStrapi.config).toHaveBeenCalledWith('version')
     })
   })
 }) 

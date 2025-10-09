@@ -1,9 +1,11 @@
+import type { Core } from '@strapi/strapi'
+
 import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { z } from 'zod'
+
 import admin from '../controllers/admin'
 import config from '../config'
 import { PLUGIN_ID } from '../pluginId'
-import type { Core } from '@strapi/strapi'
-import { z } from 'zod'
 
 describe('App Version Plugin', () => {
   describe('Admin Controller', () => {
@@ -14,16 +16,27 @@ describe('App Version Plugin', () => {
 
     beforeEach(() => {
       vi.clearAllMocks()
-      mockStrapi.config.mockReturnValue('1.0.0')
+      mockStrapi.config.mockImplementation((key: string) => {
+        if (key === 'version') return '1.0.0'
+        if (key === 'date') return '2024-01-01'
+        if (key === 'url') return 'https://example.com'
+        return undefined
+      })
     })
 
     it('should return version from config', () => {
       const controller = admin({ strapi: mockStrapi })
-      const result = controller.configVersion()
+      const result = controller.config()
 
       expect(mockStrapi.plugin).toHaveBeenCalledWith(PLUGIN_ID)
       expect(mockStrapi.config).toHaveBeenCalledWith('version')
-      expect(result).toEqual({ version: '1.0.0' })
+      expect(mockStrapi.config).toHaveBeenCalledWith('date')
+      expect(mockStrapi.config).toHaveBeenCalledWith('url')
+      expect(result).toEqual({
+        version: '1.0.0',
+        date: '2024-01-01',
+        url: 'https://example.com',
+      })
     })
   })
 
@@ -34,7 +47,11 @@ describe('App Version Plugin', () => {
     })
 
     it('should validate valid config', () => {
-      const validConfig = { version: '1.0.0' }
+      const validConfig = {
+        version: '1.0.0',
+        date: new Date().toISOString(),
+        url: 'https://example.com',
+      }
       expect(() => config.validator(validConfig)).not.toThrow()
     })
 

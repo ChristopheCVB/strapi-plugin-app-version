@@ -1,8 +1,8 @@
 export default [
   {
     method: 'GET',
-    path: '/config/version',
-    handler: 'admin.configVersion',
+    path: '/config',
+    handler: 'admin.config',
     config: {
       policies: ['admin::isAuthenticatedAdmin'],
     },

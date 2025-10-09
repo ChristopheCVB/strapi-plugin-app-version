@@ -1,8 +1,8 @@
 export default [
   {
     method: 'GET',
-    path: '/config/version',
-    handler: 'content.configVersion',
+    path: '/config',
+    handler: 'content.config',
     config: {},
   },
 ]

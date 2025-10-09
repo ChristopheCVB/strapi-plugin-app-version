@@ -1,11 +1,15 @@
 import type { Core } from '@strapi/strapi'
-import { type Config } from '../config'
+import type { Config } from '../config'
+
 import { PLUGIN_ID } from '../pluginId'
 
 const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
-  configVersion() {
+  config() {
+    const plugin = strapi.plugin(PLUGIN_ID)
     return {
-      version: strapi.plugin(PLUGIN_ID).config('version') as Config['version'],
+      version: plugin.config<Config['version']>('version'),
+      date: plugin.config<Config['date']>('date'),
+      url: plugin.config<Config['url']>('url'),
     }
   },
 })
