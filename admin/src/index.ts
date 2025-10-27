@@ -17,16 +17,12 @@ export default {
     // Add the settings link
     app.addSettingsLink('global', {
       id: `${PLUGIN_ID}.plugin.name`,
-      to: `/settings/${PLUGIN_ID}`,
+      to: `${PLUGIN_ID}`,
       intlLabel: {
         id: `${PLUGIN_ID}.plugin.name`,
         defaultMessage: 'App Version',
       },
-      // @ts-expect-error component type mismatch
-      Component: async () => {
-        const { App } = await import('./pages/App')
-        return App
-      },
+      Component: () => import('./pages/App'),
       permissions: [],
     })
   },
