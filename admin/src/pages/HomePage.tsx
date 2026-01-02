@@ -1,6 +1,6 @@
 import type { Config } from '../../../server/src/config'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Layouts, Page, getFetchClient } from '@strapi/strapi/admin'
 import { Loader, Flex, Typography, Card, LinkButton } from '@strapi/design-system'
 import { Code, ExternalLink } from '@strapi/icons'
@@ -25,6 +25,15 @@ const HomePage = () => {
     })
   }, [])
 
+  const dateFormatter = useMemo(() => Intl.DateTimeFormat(navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }), [])
+
   return (
     <Page.Main>
       <Layouts.Header
@@ -38,11 +47,13 @@ const HomePage = () => {
                 <Loader />
               ) : (
                 <>
-                  <Code style={{ width: '60px', height: '60px' }} />
-                  <Typography variant='alpha'>Version: {config?.version}</Typography>
+                  <Flex gap={4}>
+                    <Code style={{ width: '60px', height: '60px' }} />
+                    <Typography variant='alpha'>Version: {config?.version}</Typography>
+                  </Flex>
                   {
-                    (config?.date || config?.url) && <Flex style={{ marginTop: '4rem'}} direction="column" gap={2}>
-                      {config?.date && <Typography variant='delta'>Date: {config?.date}</Typography>}
+                    (config?.date || config?.url) && <Flex style={{ marginTop: '3rem'}} direction="column" gap={6}>
+                      {config?.date && <Typography variant='delta'>Date: {dateFormatter.format(new Date(config.date))}</Typography>}
                       {config?.url && <LinkButton variant='tertiary' href={config.url} isExternal endIcon={<ExternalLink />}>More information</LinkButton>}
                     </Flex>
                   }
