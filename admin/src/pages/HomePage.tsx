@@ -48,8 +48,8 @@ const HomePage = () => {
               ) : (
                 <>
                   <Flex gap={4}>
-                    <Code style={{ width: '60px', height: '60px' }} />
-                    <Typography variant='alpha'>Version: {config?.version}</Typography>
+                    <Code width={60} height={60} />
+                    <Typography variant='beta'>Version: {config?.version}</Typography>
                   </Flex>
                   {
                     (config?.date || config?.url) && <Flex style={{ marginTop: '3rem'}} direction="column" gap={6}>
