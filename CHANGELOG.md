@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.7.1...v0.7.2) (2026-02-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to ^4.3.6 ([#196](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/196)) ([d3b9a93](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/d3b9a93ac41f13c87afffa1c290785213392a254))
+
 ## [0.7.1](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.7.0...v0.7.1) (2026-01-14)
 
 
