@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.3](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.7.2...v0.7.3) (2026-07-09)
+
+
+### Bug Fixes
+
+* **release:** update NPM publish command to include --no-git-checks ([c5bec91](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/c5bec9169c1b056dcf7e8cc8483cc1ad69ea0c1c))
+
 ## [0.7.2](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.7.1...v0.7.2) (2026-07-09)
 
 
