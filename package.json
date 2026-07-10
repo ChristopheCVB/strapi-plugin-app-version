@@ -76,7 +76,7 @@
     "@strapi/design-system": "^2.2.2",
     "@strapi/icons": "^2.2.2",
     "@uidotdev/usehooks": "^2.4.1",
-    "react-intl": "^7.1.14",
+    "react-intl": "^10.1.14",
     "slugify": "^1.6.9",
     "zod": "^4.4.3"
   },
