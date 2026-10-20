@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.4](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.7.3...v0.7.4) (2026-10-20)
+
+
+### Bug Fixes
+
+* **deps:** bump the npm-minor-patch group across 1 directory with 7 updates ([#248](https://github.com/ChristopheCVB/strapi-plugin-app-version/issues/248)) ([bcd6fa9](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/bcd6fa993198a56e536c8ff6022ec55db5dc2c11))
+* Update dependabot prefixes ([932d035](https://github.com/ChristopheCVB/strapi-plugin-app-version/commit/932d03581b0baa35d4f87938f3f26f692ac16e1e))
+
 ## [0.7.3](https://github.com/ChristopheCVB/strapi-plugin-app-version/compare/v0.7.2...v0.7.3) (2026-07-09)
 
 
